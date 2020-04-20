@@ -27,7 +27,7 @@ public class JsonUtils {
             sandwich.setPlaceOfOrigin(jsonSandwich.getString("placeOfOrigin"));
             sandwich.setDescription(jsonSandwich.getString("description"));
 
-            JSONArray ingredientsArray = sandwichNames.getJSONArray("ingredients");
+            JSONArray ingredientsArray = jsonSandwich.getJSONArray("ingredients");
             sandwich.setIngredients(jsonArrayToStringList(ingredientsArray));
 
             return sandwich;
